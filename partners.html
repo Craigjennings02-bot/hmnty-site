@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HMNTY — Founding Partner Program</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0A0A0F; color: #fff; }
+  .hero {
+    min-height: 60vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 60px 20px; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -30%; left: -20%;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(233,69,96,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .badge { display: inline-block; background: #E94560; color: #fff; font-size: 13px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 24px; letter-spacing: 1.5px; }
+  .logo { font-size: 48px; font-weight: 900; letter-spacing: 3px; margin-bottom: 16px; }
+  h1 { font-size: 36px; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
+  .subtitle { font-size: 18px; color: rgba(255,255,255,0.6); max-width: 550px; line-height: 1.7; }
+  
+  .section { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+  h2 { font-size: 28px; font-weight: 800; margin-bottom: 24px; }
+  
+  .problem { background: rgba(255,255,255,0.03); border-left: 3px solid #E94560; padding: 24px 28px; border-radius: 0 12px 12px 0; margin-bottom: 40px; }
+  .problem p { font-size: 17px; color: rgba(255,255,255,0.7); line-height: 1.7; }
+  
+  .perks { list-style: none; }
+  .perks li { padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: flex-start; gap: 16px; }
+  .perks li:last-child { border-bottom: none; }
+  .perk-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .perk-text h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .perk-text p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+  .how { counter-reset: steps; }
+  .step { display: flex; gap: 20px; margin-bottom: 32px; align-items: flex-start; }
+  .step-num { 
+    counter-increment: steps; flex-shrink: 0;
+    width: 40px; height: 40px; border-radius: 50%; background: #E94560;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px;
+  }
+  .step-content h3 { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .step-content p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+
+  .cta-section { text-align: center; padding: 60px 20px 80px; }
+  .cta {
+    display: inline-block; padding: 18px 48px; border-radius: 12px;
+    font-size: 18px; font-weight: 700; text-decoration: none;
+    background: #E94560; color: #fff; transition: transform 0.2s;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  .cta-note { margin-top: 12px; font-size: 14px; color: rgba(255,255,255,0.35); }
+
+  .founder { text-align: center; padding: 40px 20px 60px; max-width: 600px; margin: 0 auto; }
+  .founder p { font-size: 16px; color: rgba(255,255,255,0.5); line-height: 1.7; font-style: italic; }
+  .founder .name { margin-top: 12px; font-style: normal; font-weight: 700; color: rgba(255,255,255,0.7); }
+
+  .footer { text-align: center; padding: 30px 20px; color: rgba(255,255,255,0.25); font-size: 13px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .footer a { color: rgba(255,255,255,0.35); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .logo { font-size: 36px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo">HMNTY</div>
+  <span class="badge">⚡ FOUNDING PARTNER PROGRAM</span>
+  <h1>Your events deserve<br>more than an Instagram post</h1>
+  <p class="subtitle">HMNTY puts your business in front of people who are actively looking for something to do right now. Not tomorrow. Not next week. Tonight.</p>
+</div>
+
+<div class="section">
+  <div class="problem">
+    <p><strong>The problem:</strong> You spend time promoting events on social media. Your post gets 47 likes and 3 shares. Nobody shows up. Meanwhile, hundreds of people within a mile of your door are sitting on their couch wondering "what should we do tonight?" They never see your post.</p>
+  </div>
+
+  <h2>What you get as a Founding Partner</h2>
+  <ul class="perks">
+    <li>
+      <span class="perk-icon">📍</span>
+      <div class="perk-text">
+        <h3>Live map visibility</h3>
+        <p>Your events appear on a real-time map for everyone nearby. Not buried in a feed — pinned on the map where people are looking.</p>
+      </div>
+    </li>
+    <li>
+      <span class="perk-icon">⚡</span>
+      <div class="perk-text">
+        <h3>Permanent Founding Partner badge</h3>
+        <p>Early adopters get a verified Founding Partner badge that never goes away. Limited to the first wave of businesses in each city.</p>
+      </div>
+    </li>
+    <li>
+      <span class="perk-icon">🆓</span>
+      <div class="perk-text">
+        <h3>Zero fees — forever during beta</h3>
+        <p>Post unlimited events. No listing fees, no ticket fees, no catch. We're building this together.</p>
+      </div>
+    </li>
+    <li>
+      <span class="perk-icon">🔔</span>
+      <div class="perk-text">
+        <h3>Push notifications to nearby users</h3>
+        <p>When someone is within range of your event, they get notified. Way better than hoping the algorithm shows your post.</p>
+      </div>
+    </li>
+    <li>
+      <span class="perk-icon">📸</span>
+      <div class="perk-text">
+        <h3>Live Moments</h3>
+        <p>Attendees share photos and clips from your events in real-time. Free social proof that brings more people next time.</p>
+      </div>
+    </li>
+    <li>
+      <span class="perk-icon">📊</span>
+      <div class="perk-text">
+        <h3>Analytics (coming soon)</h3>
+        <p>See who's engaging with your events — views, joins, shares. Know what's working.</p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Who it's for</h2>
+  <div class="problem">
+    <p>Bars, restaurants, breweries, coffee shops, gyms, yoga studios, climbing gyms, sports leagues, music venues, event promoters, community organizations — anyone who hosts events or activities and wants more people to show up.</p>
+  </div>
+</div>
+
+<div class="section">
+  <h2>How it works</h2>
+  <div class="how">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Download HMNTY</h3>
+        <p>Available on TestFlight now. App Store coming soon.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Create your business profile</h3>
+        <p>Sign up, set your account to Business, add your logo and info.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Post your events</h3>
+        <p>Trivia Tuesday, live music Friday, happy hour daily — whatever you've got. Takes 30 seconds.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>People show up</h3>
+        <p>Nearby users see your event, join, and walk through your door.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="founder">
+  <p>"I moved to Omaha and didn't know anyone. I'd sit at home scrolling through dead Facebook events wondering what to do. So I built HMNTY — an app that shows you what's actually happening near you, right now. I'm starting with the businesses and venues that make this city great."</p>
+  <p class="name">— Michael Archibeque, Founder</p>
+</div>
+
+<div class="cta-section">
+  <a href="mailto:hello@hmnty.app?subject=Founding%20Partner%20—%20[Business%20Name]&body=Hey%20Michael,%0A%0AWe're%20interested%20in%20the%20Founding%20Partner%20program.%0A%0ABusiness%20name:%0AType%20of%20business:%0ALocation:%0A" class="cta">Become a Founding Partner</a>
+  <p class="cta-note">Limited spots. Free forever during beta.</p>
+</div>
+
+<footer class="footer">
+  <p>HMNTY &copy; 2026 &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="https://instagram.com/hmnty_app">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/hmnty_app">X</a></p>
+</footer>
+
+</body>
+</html>
