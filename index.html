@@ -87,9 +87,11 @@
   <p class="tagline">stop scrolling. start living.</p>
   <p class="subtitle">The social app for real life. Find hangouts, events, and people near you — or post your own. From bar crawls to pickup basketball.</p>
   <div class="cta-row">
-    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary">Download Beta</a>
+    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary" id="hero-cta">Download Beta</a>
     <a href="#business" class="cta cta-secondary">For Businesses</a>
   </div>
+  <p id="hero-fallback" style="display:none; margin-top:20px; color:rgba(255,255,255,0.5); font-size:15px;">Beta spots are filling up — drop your email and we'll get you in.</p>
+  <a id="waitlist-btn" href="mailto:hello@hmnty.app?subject=HMNTY%20Beta%20Waitlist&body=I%20want%20early%20access%20to%20HMNTY!" class="cta cta-primary" style="display:none; margin-top:16px;">Join the Waitlist</a>
 </div>
 
 <div class="section">
@@ -163,9 +165,33 @@
   <h2>Launching in Omaha</h2>
   <p class="lead">HMNTY is starting local. Omaha is home — and this city deserves better than scrolling through dead Facebook events.</p>
   <div style="margin-top: 32px;">
-    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary">Join the Beta</a>
+    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary" id="bottom-cta">Join the Beta</a>
+    <div id="bottom-waitlist" style="display:none; text-align:center;">
+      <a href="mailto:hello@hmnty.app?subject=HMNTY%20Beta%20Waitlist&body=I%20want%20early%20access%20to%20HMNTY!" class="cta cta-primary">Join the Waitlist</a>
+      <p style="margin-top:12px; color:rgba(255,255,255,0.5); font-size:14px;">Beta launching soon — we'll notify you first.</p>
+    </div>
   </div>
 </div>
+
+<script>
+// Show waitlist instead of TestFlight on non-iOS devices
+// (TestFlight only works on iPhone/iPad)
+if (!/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+  swapToWaitlist();
+}
+function swapToWaitlist() {
+  var h = document.getElementById('hero-cta');
+  var hf = document.getElementById('hero-fallback');
+  var wb = document.getElementById('waitlist-btn');
+  var bc = document.getElementById('bottom-cta');
+  var bw = document.getElementById('bottom-waitlist');
+  if (h) h.style.display = 'none';
+  if (hf) hf.style.display = 'block';
+  if (wb) wb.style.display = 'inline-block';
+  if (bc) bc.style.display = 'none';
+  if (bw) bw.style.display = 'block';
+}
+</script>
 
 <footer class="footer">
   <p>HMNTY &copy; 2026 &nbsp;·&nbsp; <a href="https://gist.githubusercontent.com/Craigjennings02-bot/fd8a3caf0777c5d0f65b23b0283bd70e/raw/6a2824bffc0f7d9dbe793f73055a0dc14c018a1f/gistfile1.txt">Privacy</a> &nbsp;·&nbsp; <a href="mailto:hello@hmnty.app">Contact</a> &nbsp;·&nbsp; <a href="https://instagram.com/hmnty_app">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/hmnty_app">X</a> &nbsp;·&nbsp; <a href="https://tiktok.com/@hmnty_app">TikTok</a></p>
