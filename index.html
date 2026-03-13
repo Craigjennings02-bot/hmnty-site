@@ -5,93 +5,307 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HMNTY — Stop scrolling. Start living.</title>
 <meta name="description" content="HMNTY is the social app for real life. Find hangouts, events, and people near you in Omaha.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0A0A0F; color: #fff; }
-  
-  .hero {
-    min-height: 100vh; display: flex; flex-direction: column;
-    justify-content: center; align-items: center; text-align: center;
-    padding: 40px 20px; position: relative; overflow: hidden;
+
+  :root {
+    --base: #0E0E1A;
+    --surface: #1A1A2E;
+    --surface-raised: #232342;
+    --gold: #C9A96E;
+    --gold-dim: rgba(201,169,110,0.10);
+    --gold-border: rgba(201,169,110,0.20);
+    --text-primary: #F5F0EB;
+    --text-secondary: #8A8A9A;
+    --text-muted: #5A5A6A;
+    --divider: rgba(255,255,255,0.06);
   }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--base);
+    color: var(--text-primary);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
   .hero::before {
-    content: ''; position: absolute; top: -50%; right: -30%;
-    width: 600px; height: 600px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(233,69,96,0.12) 0%, transparent 70%);
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
     pointer-events: none;
   }
-  .logo { font-size: 64px; font-weight: 900; letter-spacing: 4px; margin-bottom: 8px; }
-  .logo span { position: relative; }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -20%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,169,110,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 14px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
   .logo-line {
-    display: block; width: 60%; height: 2px; margin: 0 auto;
-    background: linear-gradient(90deg, transparent, #E94560, transparent);
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.6;
   }
-  .tagline { font-size: 20px; color: rgba(255,255,255,0.5); font-weight: 300; margin-top: 16px; }
-  .subtitle { font-size: 18px; color: rgba(255,255,255,0.75); margin-top: 32px; max-width: 500px; line-height: 1.6; }
-  
-  .cta-row { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; justify-content: center; }
+
+  .tagline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin-top: 28px;
+    max-width: 520px;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    margin-top: 44px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .cta {
-    display: inline-block; padding: 16px 40px; border-radius: 12px;
-    font-size: 18px; font-weight: 700; text-decoration: none; transition: transform 0.2s;
+    display: inline-block;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
+
   .cta:hover { transform: translateY(-2px); }
-  .cta-primary { background: #E94560; color: #fff; }
-  .cta-secondary { background: rgba(255,255,255,0.08); color: #fff; border: 1px solid rgba(255,255,255,0.15); }
 
+  .cta-primary {
+    background: var(--gold);
+    color: var(--base);
+    box-shadow: 0 4px 24px rgba(201,169,110,0.25);
+  }
+  .cta-primary:hover {
+    box-shadow: 0 6px 32px rgba(201,169,110,0.35);
+  }
+
+  .cta-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--gold-border);
+  }
+  .cta-secondary:hover {
+    background: var(--gold-dim);
+    border-color: rgba(201,169,110,0.35);
+  }
+
+  /* ── SECTIONS ── */
   .section {
-    padding: 80px 20px; max-width: 900px; margin: 0 auto;
+    padding: 100px 24px;
+    max-width: 960px;
+    margin: 0 auto;
   }
+
   .section h2 {
-    font-size: 36px; font-weight: 800; margin-bottom: 16px; text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: -0.3px;
   }
+
   .section .lead {
-    font-size: 18px; color: rgba(255,255,255,0.6); text-align: center; margin-bottom: 48px; max-width: 600px; margin-left: auto; margin-right: auto;
+    font-size: 17px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 56px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    font-weight: 400;
   }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+  /* ── GRID / CARDS ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
   .card {
-    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px; padding: 32px; text-align: center;
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
   }
-  .card-icon { font-size: 40px; margin-bottom: 16px; }
-  .card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-  .card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
-  .business-section { background: rgba(233,69,96,0.05); border-top: 1px solid rgba(233,69,96,0.15); border-bottom: 1px solid rgba(233,69,96,0.15); }
-  .business-section .section { padding: 80px 20px; }
-  .badge { display: inline-block; background: #E94560; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .card:hover {
+    border-color: var(--gold-border);
+    transform: translateY(-2px);
+  }
 
-  .perks { list-style: none; max-width: 600px; margin: 0 auto; }
-  .perks li { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 17px; color: rgba(255,255,255,0.8); }
-  .perks li::before { content: '✓ '; color: #E94560; font-weight: 700; }
+  .card-icon {
+    font-size: 36px;
+    margin-bottom: 18px;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    background: var(--gold-dim);
+    border-radius: 14px;
+  }
 
+  .card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.2px;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* ── BUSINESS SECTION ── */
+  .business-section {
+    background: rgba(201,169,110,0.03);
+    border-top: 1px solid var(--gold-border);
+    border-bottom: 1px solid var(--gold-border);
+  }
+
+  .business-section .section {
+    padding: 100px 24px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--base);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .perks {
+    list-style: none;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .perks li {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--divider);
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .perks li::before {
+    content: '✓ ';
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ── FOOTER ── */
   .footer {
-    text-align: center; padding: 40px 20px; color: rgba(255,255,255,0.3); font-size: 14px;
-    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+    border-top: 1px solid var(--divider);
+    letter-spacing: 0.3px;
   }
-  .footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-  .footer a:hover { color: #E94560; }
 
+  .footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer a:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
   @media (max-width: 600px) {
-    .logo { font-size: 44px; }
+    .logo { font-size: 48px; letter-spacing: 8px; }
     .section h2 { font-size: 28px; }
-    .cta { padding: 14px 32px; font-size: 16px; }
+    .cta { padding: 14px 32px; font-size: 14px; }
+    .tagline { font-size: 14px; letter-spacing: 3px; }
+    .section { padding: 72px 20px; }
   }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <div class="logo"><span>HMNTY</span></div>
+  <div class="logo">HMNTY</div>
   <div class="logo-line"></div>
   <p class="tagline">stop scrolling. start living.</p>
-  <p class="subtitle">The social app for real life. Find hangouts, events, and people near you — or post your own. From bar crawls to pickup basketball.</p>
+  <p class="subtitle">The social app for real life. Find hangouts, events, and people near you — or post your own. From trail runs to trivia nights.</p>
   <div class="cta-row">
-    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary" id="hero-cta">Download Beta</a>
+    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary">Download Beta</a>
     <a href="#business" class="cta cta-secondary">For Businesses</a>
   </div>
-  <p id="hero-fallback" style="display:none; margin-top:20px; color:rgba(255,255,255,0.5); font-size:15px;">Beta spots are filling up — drop your email and we'll get you in.</p>
-  <a id="waitlist-btn" href="mailto:hello@hmnty.app?subject=HMNTY%20Beta%20Waitlist&body=I%20want%20early%20access%20to%20HMNTY!" class="cta cta-primary" style="display:none; margin-top:16px;">Join the Waitlist</a>
 </div>
 
 <div class="section">
@@ -111,16 +325,16 @@
     <div class="card">
       <div class="card-icon">👥</div>
       <h3>Show Up</h3>
-      <p>Join a hangout, meet new people, share live moments. Real life > your feed.</p>
+      <p>Join a hangout, meet new people, share live moments. Real life beats your feed.</p>
     </div>
   </div>
 </div>
 
 <div class="business-section" id="business">
   <div class="section">
-    <span class="badge">FOUNDING PARTNER</span>
+    <span class="badge">Founding Partner</span>
     <h2>Built for local businesses</h2>
-    <p class="lead">Your events deserve more than an Instagram post that dies in 24 hours. Get in front of people who are actively looking for something to do.</p>
+    <p class="lead">Your events deserve more than an Instagram post that dies in 24 hours. Get in front of people actively looking for something to do.</p>
     <ul class="perks">
       <li>Post unlimited events — trivia nights, live music, classes, open mics</li>
       <li>Reach people within walking distance who want to go out tonight</li>
@@ -129,7 +343,7 @@
       <li>Analytics on who's showing up (coming soon)</li>
       <li>Promoted placement in the feed (coming soon)</li>
     </ul>
-    <div style="text-align: center; margin-top: 40px;">
+    <div style="text-align: center; margin-top: 48px;">
       <a href="mailto:hello@hmnty.app?subject=HMNTY%20Founding%20Partner&body=Business%20name:%0AType%20of%20business:%0ALocation:%0A%0AI'm%20interested%20in%20being%20a%20Founding%20Partner." class="cta cta-primary">Become a Founding Partner</a>
     </div>
   </div>
@@ -137,6 +351,7 @@
 
 <div class="section">
   <h2>Perfect for</h2>
+  <p class="lead">Any local business that brings people together.</p>
   <div class="grid">
     <div class="card">
       <div class="card-icon">🍻</div>
@@ -164,37 +379,13 @@
 <div class="section" style="text-align: center;">
   <h2>Launching in Omaha</h2>
   <p class="lead">HMNTY is starting local. Omaha is home — and this city deserves better than scrolling through dead Facebook events.</p>
-  <div style="margin-top: 32px;">
-    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary" id="bottom-cta">Join the Beta</a>
-    <div id="bottom-waitlist" style="display:none; text-align:center;">
-      <a href="mailto:hello@hmnty.app?subject=HMNTY%20Beta%20Waitlist&body=I%20want%20early%20access%20to%20HMNTY!" class="cta cta-primary">Join the Waitlist</a>
-      <p style="margin-top:12px; color:rgba(255,255,255,0.5); font-size:14px;">Beta launching soon — we'll notify you first.</p>
-    </div>
+  <div style="margin-top: 36px;">
+    <a href="https://testflight.apple.com/join/xk9MNMyF" class="cta cta-primary">Join the Beta</a>
   </div>
 </div>
 
-<script>
-// Show waitlist instead of TestFlight on non-iOS devices
-// (TestFlight only works on iPhone/iPad)
-if (!/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-  swapToWaitlist();
-}
-function swapToWaitlist() {
-  var h = document.getElementById('hero-cta');
-  var hf = document.getElementById('hero-fallback');
-  var wb = document.getElementById('waitlist-btn');
-  var bc = document.getElementById('bottom-cta');
-  var bw = document.getElementById('bottom-waitlist');
-  if (h) h.style.display = 'none';
-  if (hf) hf.style.display = 'block';
-  if (wb) wb.style.display = 'inline-block';
-  if (bc) bc.style.display = 'none';
-  if (bw) bw.style.display = 'block';
-}
-</script>
-
 <footer class="footer">
-  <p>HMNTY &copy; 2026 &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@hmnty.app">Contact</a> &nbsp;·&nbsp; <a href="https://instagram.com/hmnty_app">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/hmnty_app">X</a> &nbsp;·&nbsp; <a href="https://tiktok.com/@hmnty_app">TikTok</a></p>
+  <p>HMNTY &copy; 2026 &nbsp;·&nbsp; <a href="https://gist.githubusercontent.com/Craigjennings02-bot/fd8a3caf0777c5d0f65b23b0283bd70e/raw/6a2824bffc0f7d9dbe793f73055a0dc14c018a1f/gistfile1.txt">Privacy</a> &nbsp;·&nbsp; <a href="mailto:hello@hmnty.app">Contact</a> &nbsp;·&nbsp; <a href="https://instagram.com/hmnty_app">Instagram</a> &nbsp;·&nbsp; <a href="https://x.com/hmnty_app">X</a> &nbsp;·&nbsp; <a href="https://tiktok.com/@hmnty_app">TikTok</a></p>
 </footer>
 
 </body>
