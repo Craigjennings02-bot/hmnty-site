@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #0E0E1A; }
+.post {
+  width: 1080px;
+  height: 1080px;
+  background: #0E0E1A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.post::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+}
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: #C9A96E;
+  letter-spacing: 6px;
+  margin-bottom: 60px;
+}
+.headline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  color: #F5F0EB;
+  text-align: center;
+  line-height: 1.15;
+  margin-bottom: 40px;
+}
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  color: rgba(245,240,235,0.6);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+}
+.accent {
+  color: #C9A96E;
+}
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #C9A96E, #B8964F, #C9A96E);
+}
+.tag {
+  position: absolute;
+  bottom: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  color: rgba(245,240,235,0.35);
+  letter-spacing: 1px;
+}
+</style>
+</head>
+<body>
+
+<!-- Monday: Launch -->
+<div class="post" id="p1">
+  <div class="logo">HMNTY</div>
+  <div class="headline">Stop scrolling.<br><span class="accent">Start living.</span></div>
+  <div class="subtext">The social app for real life.<br>Post what you're doing. People nearby join.</div>
+  <div class="tag">hmnty.app — Free on iOS</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Tuesday: The Problem -->
+<div class="post" id="p2">
+  <div class="logo">HMNTY</div>
+  <div class="headline">Your group chat<br>is <span class="accent">dead.</span></div>
+  <div class="subtext">Facebook Events is a graveyard.<br>Instagram shows you what you missed.<br>HMNTY shows what's happening now.</div>
+  <div class="tag">@hmnty_app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Wednesday: How It Works -->
+<div class="post" id="p3">
+  <div class="logo">HMNTY</div>
+  <div class="headline"><span class="accent">10 seconds</span><br>to post a hangout.</div>
+  <div class="subtext">Pick what you're doing → set your spot → people nearby join.<br>That's it. No RSVP drama.</div>
+  <div class="tag">@hmnty_app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Thursday: Use Cases -->
+<div class="post" id="p4">
+  <div class="logo">HMNTY</div>
+  <div class="headline">Real people.<br><span class="accent">Real hangouts.</span></div>
+  <div class="subtext" style="text-align:left;font-size:26px;line-height:2;">
+    🏀 Pickup basketball at Heartland Park<br>
+    🍻 Beers at Brickway after work<br>
+    ☕ Coffee runs in Old Market<br>
+    🧠 Trivia night in Blackstone<br>
+    🏋️ Gym sessions at 6am<br>
+    🥾 Hiking when the weather's perfect
+  </div>
+  <div class="tag">@hmnty_app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Friday: Weekend Push -->
+<div class="post" id="p5">
+  <div class="logo">HMNTY</div>
+  <div class="headline">It's <span class="accent">Friday.</span><br>Get off the couch.</div>
+  <div class="subtext">Open HMNTY. See what's happening tonight. Go.<br>Your screen time report will thank you.</div>
+  <div class="tag">@hmnty_app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Saturday: Engagement -->
+<div class="post" id="p6">
+  <div class="logo">HMNTY</div>
+  <div class="headline">What would<br><span class="accent">your first post</span><br>be?</div>
+  <div class="subtext">Coffee walk? Brewery crawl? Pickup game?<br>Drop it in the comments 👇</div>
+  <div class="tag">@hmnty_app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+<!-- Sunday: Business -->
+<div class="post" id="p7">
+  <div class="logo">HMNTY</div>
+  <div class="headline">Omaha businesses:<br><span class="accent">your events<br>deserve more.</span></div>
+  <div class="subtext">Post your events for free. Reach people actively looking for something to do tonight.<br><br>Founding Partner spots available.</div>
+  <div class="tag">hello@hmnty.app</div>
+  <div class="bottom-bar"></div>
+</div>
+
+</body>
+</html>
